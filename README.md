@@ -2,8 +2,8 @@
 Blog for bishil06
 
 # Table of Contents
-* [How to run](#how-to-run)
 * [Pages](#pages)
+* [How to run](#how-to-run)
 * [라이브러리](#라이브러리)
 * [기술스택](#기술스택)
 * [아키텍처](#아키텍처)
@@ -15,11 +15,6 @@ Blog for bishil06
 * [개발도구](#개발도구)
 * [개발기간](#개발기간)
 
-# How to run
-```
-node server.js
-```
-
 # Pages
 - [ ] main - 메인 페이지
 - [ ] profile - 프로파일
@@ -27,6 +22,24 @@ node server.js
 - [ ] video - 동영상
 - [ ] exercise - 운동
 - [ ] chat - 채팅
+
+# How to run
+## Setting
+.dotenv
+```
+PORT=8080
+NODE_ENV=production
+DB_URL=mongodb://ip:port/blog
+DB_ID=root
+DB_PASSWORD=some-password
+```
+## DB run
+```
+```
+## Server run
+```
+node server.js
+```
 
 # 라이브러리
 
