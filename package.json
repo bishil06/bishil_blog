@@ -1,0 +1,25 @@
+{
+  "name": "bishil_blog",
+  "version": "1.0.0",
+  "description": "Blog for bishil06",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bishil06/bishil_blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bishil06/bishil_blog/issues"
+  },
+  "homepage": "https://github.com/bishil06/bishil_blog#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
