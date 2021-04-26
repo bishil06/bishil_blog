@@ -17,7 +17,7 @@ Blog for bishil06
 
 # Pages
 - [ ] main - 메인 페이지
-- [ ] profile - 프로파일
+- [ ] profile - 자기소개
 - [ ] portpolio - 포트폴리오
 - [ ] video - 동영상
 - [ ] exercise - 운동
