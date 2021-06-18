@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 
-import { app } from './src/init.js';
+import { createApplication } from './src/init.js';
 import { connectDB } from './src/db.js'
 
 dotenv.config();
@@ -8,6 +8,7 @@ dotenv.config();
 const PORT = process.env.PORT | 8888;
 const { MONGO_ID, MONGO_PASSWD, MONGO_URL } = process.env
 
+const app = createApplication(process.env)
 const mongoose = await connectDB(MONGO_ID, MONGO_PASSWD, MONGO_URL)
     .then((mongoose) => {
         console.log('db connect success')

@@ -2,17 +2,22 @@ import express from 'express';
 import helmet from 'helmet';
 import { loggerMiddleware, sessionMiddleware } from './middlewares.js';
 
-export const app = express();
+export function createApplication(env) {
+    const { NODE_ENV, SESSION_SECRET } = env
 
-app.use(loggerMiddleware)
-app.use(helmet());
-app.use(sessionMiddleware);
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+    const app = express();
 
-app.set('view engine', 'pug');
+    app.use(loggerMiddleware(NODE_ENV))
+    app.use(helmet());
+    app.use(sessionMiddleware(SESSION_SECRET));
+    app.use(express.urlencoded({ extended: true }));
+    app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.render('main');
-});
+    app.set('view engine', 'pug');
 
+    app.get('/', (req, res) => {
+        res.render('main');
+    });
+
+    return app;
+}
